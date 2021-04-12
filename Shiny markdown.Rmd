@@ -20,3 +20,24 @@ library("rsconnect")
 
 
 
+#load in the functions
+
+```{r}
+
+source(file = "R/load_functions.R")
+```
+#testing the functions
+
+```{r}
+dna = random_dna(size = 30)
+
+codons = mk_codons(dna = dna)
+
+aa = dna_codons_to_aa(codons = codons)
+
+peptide_weight(aa_string = aa)
+
+aa_statistics(aa_string = aa)
+
+```
+
