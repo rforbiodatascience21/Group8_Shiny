@@ -3,7 +3,7 @@
 #' @description Takes a Amino-Acids string as input and creates a barplot of different
 #' amino acid groups
 #'
-#' @param aa_statistics A string of Amino acids
+#' @param aa_string A string of Amino acids
 #'
 #' @return :statistics, maybe barplot?
 #' @export
@@ -11,8 +11,6 @@
 #' @examples
 #' aa_statistics("ALMVGLFNDR")
 #'
-
-
 aa_statistics <- function(aa_string){
   # counting amino acids
   aliphatic <- str_count(aa_string, c("L", "I", "A", "M", "V")) %>% sum()
@@ -32,6 +30,6 @@ aa_statistics <- function(aa_string){
     geom_col() +
     xlab("Amino Acid Groups") +
     ylab("Total Count") +
-    theme(title = "Amino Acid Group Count", legend.position = "none")
+    labs(title = "Amino Acid Group Count", legend.position = "none")
   plot
 }
