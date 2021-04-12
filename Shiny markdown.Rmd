@@ -1,0 +1,22 @@
+---
+title: "My name creativity is gone"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R packages necessary
+
+```{r}
+library("tidyverse")
+library("rsconnect")
+
+```
+
+#To deploy the shiny app use this code rsconnect::deployApp('path/to/your/app')
+#This should be the website https://www.2021-group-8.shinyapps.io/
+
+
+
