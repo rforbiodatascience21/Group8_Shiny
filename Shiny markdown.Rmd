@@ -12,11 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library("tidyverse")
 library("rsconnect")
-
+library("shiny")
 ```
 
-#To deploy the shiny app use this code rsconnect::deployApp('path/to/your/app')
-#This should be the website https://www.2021-group-8.shinyapps.io/
+
 
 
 
@@ -40,4 +39,14 @@ peptide_weight(aa_string = aa)
 aa_statistics(aa_string = aa)
 
 ```
+
+
+
+#Getting it online
+
+```{r}
+rsconnect::deployApp()
+#This should be the website https://www.2021-group-8.shinyapps.io/
+```
+
 
