@@ -1,17 +1,17 @@
 library(shiny)
-library(ggplot2)
+library(tidyverse)
 
 dataset <- diamonds
 
 fluidPage(
   
-  titlePanel("Diamonds Explorer"),
+  titlePanel("DNA translation"),
   
-  sidebarPanel(
+  sidebarPan(
     
     sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
                 value=min(1000, nrow(dataset)), step=500, round=0),
-    
+    textInput(inputId = , label = "DNA fasta sequence"),
     selectInput('x', 'X', names(dataset)),
     selectInput('y', 'Y', names(dataset), names(dataset)[[2]]),
     selectInput('color', 'Color', c('None', names(dataset))),
