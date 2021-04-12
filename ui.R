@@ -3,6 +3,7 @@ library(tidyverse)
 
 dataset <- diamonds
 
+
 fluidPage(
   
   titlePanel("DNA translation"),
@@ -27,3 +28,4 @@ fluidPage(
     plotOutput('plot')
   )
 )
+
