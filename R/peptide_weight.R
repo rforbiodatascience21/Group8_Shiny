@@ -1,7 +1,15 @@
-install.packages("dplyr")
-install.packages("stringr")
-library("dplyr")
-library("stringr")
+#' Total peptide weight
+#'
+#' @description Takes a Amino-Acids string calculates total weight
+#'
+#' @param aa_string A string of Amino acids
+#'
+#' @return total weight
+#' @export
+#'
+#' @examples
+#' peptide_weight("ALMVGLFNDR")
+#'
 
 peptide_weight <- function(aa_string){
   
@@ -37,11 +45,9 @@ peptide_weight <- function(aa_string){
  
   total_weight <- A + R + N + D + C + E + Q + M + F + P + S + T + W + Y + V
   
-  print(total_weight)
+  return(total_weight)
 }
 
 
-aa_string <- "AAR"
 
-peptide_weight(aa_string)
 

@@ -26,9 +26,10 @@ aa_statistics <- function(aa_string){
   
   # barplot 
   plot <- aa_df %>% 
-    ggplot(mapping = aes(x = aa_groups, y = aa_count, fill= aa_groups )) +
+    ggplot(mapping = aes(x = aa_groups, y = aa_count, fill= aa_groups, ce)) +
     geom_col() +
     xlab("Amino Acid Groups") +
+    theme(axis.text.x = element_text(size = 20))+
     ylab("Total Count") +
     labs(title = "Amino Acid Group Count", legend.position = "none")
   plot
