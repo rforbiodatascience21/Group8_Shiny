@@ -17,5 +17,5 @@ dna_codons_to_aa <- function(codons){
                       "GTA" = "V", "GCA" = "A", "GAA" = "E", "GGA" = "G",
                       "GTG" = "V", "GCG" = "A", "GAG" = "E", "GGG" = "G")
   aa <- paste0(std_code_table[codons], collapse = "")
-  return(aa)
+  return(aa_string)
 }
