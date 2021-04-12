@@ -27,3 +27,5 @@ fluidPage(
     plotOutput('plot')
   )
 )
+install.packages('rsconnect')
+
