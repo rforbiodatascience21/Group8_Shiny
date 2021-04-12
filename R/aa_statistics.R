@@ -16,7 +16,7 @@
 aa_statistics <- function(aa_string){
   # counting amino acids
   aliphatic <- str_count(aa_string, c("L", "I", "A", "M", "V")) %>% sum()
-  aromatic <- sum(str_count(aa_string, c("F", "W", "Y"))) %>% sum()
+  aromatic <- str_count(aa_string, c("F", "W", "Y")) %>% sum()
   neutral <- str_count(aa_string, c("N", "C", "Q", "S", "T", "G", "P")) %>% sum()
   acidc <- str_count(aa_string, c("D", "E")) %>% sum()
   basic <- str_count(aa_string, c("R", "H", "K")) %>% sum()
